@@ -28,6 +28,10 @@ class CoursesController < ApplicationController
 
   def lecture
     authorize @course
+    respond_to do |format|
+      format.html 
+      format.pdf { render template: 'courses/article', pdf: 'article'}
+      end
   end
 
   def video
@@ -68,7 +72,7 @@ class CoursesController < ApplicationController
   def destroy
     @course.destroy
     authorize @course
-    redirect_to courses_url, notice: 'pet was successfully destroyed.'
+    redirect_to courses_url, notice: 'Course was successfully destroyed.'
   end
 
   private
@@ -78,6 +82,6 @@ class CoursesController < ApplicationController
   end
 
   def course_params
-    params.require(:course).permit(:name, :description, :lecture, :code, :video, :category, :difficulty, :photo, :body, :tag_list, :short_description, images: [])
+    params.require(:course).permit(:name, :description, :lecture, :code, :video, :dataset, :category, :difficulty, :photo, :body, :tag_list, :short_description, images: [])
   end
 end

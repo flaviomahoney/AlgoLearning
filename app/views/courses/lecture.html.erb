@@ -13,11 +13,9 @@
 </div>
 
 <div class="m-4 d-flex justify-content-between">
-  <div class="text-justify">
-  <%= @course.body %>
-  </div>
+  <iframe id="article" src="http://localhost:3000/courses/<%= @course.id %>/lecture.pdf" frameborder="0"></iframe>
   <% if @course.images.any? %>
-    <div class="card-carousel-vis my-3 ml-4 ">
+    <div class="card-carousel-vis ml-4 ">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <% @course.images.each_with_index do |image, index| %>
@@ -44,3 +42,4 @@
     </div>
   <% end %>
 </div>
+

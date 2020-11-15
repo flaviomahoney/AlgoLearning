@@ -1,3 +1,17 @@
+#article {
+  width: 8000px;
+  height: 460px;
+}
+
+.lecture-board {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-right: 10px;
+  padding: 20px;
+  background-color: #303960;
+  color: white;
+}
+
+
 .card-list {
   list-style-type: none;
   margin-bottom: 1rem;

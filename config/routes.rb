@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/about', to: 'pages#about'
-
+  
   resources :courses do
     resources :progresses, only: [:create, :update]
     resources :comments, only: [:create]

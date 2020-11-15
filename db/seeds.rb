@@ -9,6 +9,7 @@ require 'open-uri'
 OpenURI::Buffer.send :remove_const, 'StringMax' if OpenURI::Buffer.const_defined?('StringMax')
 OpenURI::Buffer.const_set 'StringMax', 0
 
+
 puts"destroying the seeds..."
 User.destroy_all
 Course.destroy_all
@@ -227,7 +228,7 @@ file = URI.open(ninth_photo)
 filename = File.basename(URI.parse(ninth_photo).path)
 ninth_course = Course.new(name: "Binary Search", video: 'https://www.youtube.com/embed/T2sFYY-fT5o', description: "In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array.", category: "Binary", difficulty: "Hard", short_description: "Binary works on sorted arrays and search begins by comparing an element in the middle of the array with the target value.", tag_list: "Binary, Hard")
 ninth_course.photo.attach(io: file, filename: filename)
-images_array = ["https://1.bp.blogspot.com/-bc0aOmFA_Z0/Waq9rrwc46I/AAAAAAAACGY/phucI7gnsFUg32i2gOGtKUVsk_wNBXUowCLcBGAs/s1600/given-sorted-array-search-element-using-binary-search.png", "https://image.slidesharecdn.com/ch12searchlinearbinary-150930234148-lva1-app6891/95/linear-search-binary-search-5-638.jpg?cb=1443658121", "https://i1.faceprep.in/fp/articles/img/67031_1580367321.png", "https://miro.medium.com/max/1066/0*D_qH3srKzfov43Yl"]
+images_array = ["https://res.cloudinary.com/dhk8ebunw/image/upload/v1592574413/img02_dxfkhd.png", "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592574413/img01_ja2l6r.png", "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592574413/img03_ykzbko.png", "https://res.cloudinary.com/dhk8ebunw/image/upload/v1592574413/img04_nns3fz.png"]
 images_array.each do |image|
   img_file = URI.open(image)
   img_filename = File.basename(URI.parse(image).path)
@@ -237,3 +238,7 @@ ninth_course.save
 
 
 puts"seeds created! Done!"
+
+
+
+

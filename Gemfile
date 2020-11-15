@@ -73,3 +73,5 @@ gem "image_processing", "~> 1.2"
 
 #tags
 gem 'acts-as-taggable-on', '~> 6.0'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
