@@ -69,7 +69,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # CLOUDINARY
 gem 'cloudinary', '~> 1.12.0'
 gem "actiontext", require: "action_text"
-gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.12"
 
 #tags
 gem 'acts-as-taggable-on', '~> 6.0'
